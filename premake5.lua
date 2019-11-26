@@ -1,9 +1,10 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
+	location "."
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("./bin/%{cfg.longname}_%{cfg.architecture}")
+	objdir ("./bin-int/%{cfg.longname}_%{cfg.architecture}")
 
 	files
 	{
